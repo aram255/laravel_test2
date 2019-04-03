@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/ok',function(){
+//       echo 'cfcf';
+// })->name('kk');
+
+
+Route::get('/method','StudentController@method')->name('asssss');

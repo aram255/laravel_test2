@@ -1,5 +1,5 @@
 <?php
-'Aram'
+
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
