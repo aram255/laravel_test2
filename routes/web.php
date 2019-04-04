@@ -15,9 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 // Route::get('/ok',function(){
 //       echo 'cfcf';
 // })->name('kk');
 
+//Route::get('/method','StudentController@method')->name('asssss');
 
-Route::get('/method','StudentController@method')->name('asssss');
+Route::get('index','StudentController@index');

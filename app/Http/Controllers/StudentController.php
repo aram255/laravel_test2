@@ -12,4 +12,10 @@ class StudentController extends Controller
 
     	return view('header');
     }
+
+
+    public function index()
+    {
+    	return view('index');
+    }
 }
