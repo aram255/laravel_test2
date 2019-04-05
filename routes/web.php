@@ -25,4 +25,9 @@ Route::get('/home', function () {
 
 //Route::get('/method','StudentController@method')->name('asssss');
 
-Route::get('index','StudentController@index');
+Route::get('/','StudentController@index');
+
+Route::get('add-contact','ContactController@Addcontact');
+Route::get('all-contact','ContactController@Allcontact')->name('all.contact');
+
+Route::post('insert-contact','ContactController@InsertContact');
