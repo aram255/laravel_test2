@@ -26,9 +26,12 @@
 @endif
   <!--   redirect maassige -->
 
+
+
+
 <div class="container">
   <h2>Hoverable Dark Table</h2>
-  <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
+              
   <table class="table table-dark table-hover">
     <thead>
       <tr>
@@ -36,29 +39,23 @@
         <th>Namde</th>
         <th>Email</th>
         <th>Phone</th>
-        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-    	@foreach($all_contacts as $contact)
       <tr>
-        <td>{{ $contact->id }}</td>
-        <td contenteditable="true">{{ $contact->name }}</td>
-        <td contenteditable="true">{{ $contact->email }}</td>
-        <td contenteditable="true">{{ $contact->phone }}</td>
-        <th>
-          <a href="{{ URL::to('edit-contact-view/'.$contact->id) }}" class="btn btn-warning">Edit |</a>
-          <a href="{{URL::to('show-data/'.$contact->id) }}" class="btn btn-info">View |</a>
-          <a href="{{URL::to('delete-contact/'.$contact->id)}}" class="btn btn-danger">Delete</a>
-        </th>
+        <td>{{ $contacy_view->id }}</td>
+        <td>{{ $contacy_view->name }}</td>
+        <td>{{ $contacy_view->email }}</td>
+        <td>{{ $contacy_view->phone }}</td>
+        
       </tr>
-     @endforeach
     </tbody>
   </table>
 </div>
 
 
-@endsection
+
+  @endsection
 
 @section('footer')
     <p>This is my body footer.</p>

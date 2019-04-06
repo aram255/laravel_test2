@@ -16,6 +16,7 @@ class ContactModel extends Model
         //   'alert-type' => 'Success'
        	// );
        	  echo "Yes";
+           return redirect()->to('all-contact')->with('status', 'Item Add successfully.');
        }else{
        	echo "Error";
        }
@@ -24,5 +25,31 @@ class ContactModel extends Model
     public function AllcontactModel()
     {
     	return $show = DB::table('contact')->get();
+    }
+
+
+    public function DeleteContactModel($id)
+    {
+      $delete = DB::table('contact')->where('id',$id)->delete();
+      return redirect();
+    }
+
+    public function ShowContactModel($id)
+    {
+      $show = DB::table('contact')
+      ->where('id',$id)
+      ->first();
+
+      return $show;
+    }
+
+    public function EditContactModel($id,$data)
+    {
+       $contact = DB::table('contact')
+                  ->where('id',$id)
+                  ->update($data);
+       if($contact){
+        return redirect()->to('all-contact')->with('status', 'Item Edit successfully.');
+       }
     }
 }

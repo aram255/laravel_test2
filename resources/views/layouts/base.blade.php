@@ -10,6 +10,7 @@
     <body>
         @section('header')
         <header>
+            <a href="{{ URL::to('') }}">Home</a>
            <a href="{{ URL::to('add-contact') }}">Contact</a>
            <a href="{{ route('all.contact') }}">All Contact</a>
          </header>

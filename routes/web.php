@@ -31,3 +31,8 @@ Route::get('add-contact','ContactController@Addcontact');
 Route::get('all-contact','ContactController@Allcontact')->name('all.contact');
 
 Route::post('insert-contact','ContactController@InsertContact');
+Route::get('delete-contact/{id}','ContactController@DeleteContact')->name('delete.contact');
+
+Route::get('show-data/{id}','ContactController@ShowContactView');
+Route::get('edit-contact-view/{id}','ContactController@EditContactView');
+Route::post('edit-contact/{id}','ContactController@EditContact');
