@@ -36,3 +36,6 @@ Route::get('delete-contact/{id}','ContactController@DeleteContact')->name('delet
 Route::get('show-data/{id}','ContactController@ShowContactView');
 Route::get('edit-contact-view/{id}','ContactController@EditContactView');
 Route::post('edit-contact/{id}','ContactController@EditContact');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

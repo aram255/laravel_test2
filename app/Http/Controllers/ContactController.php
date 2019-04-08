@@ -13,6 +13,7 @@ class ContactController extends Controller
 	public function __construct()
 	{
 	   $this->model = new ContactModel();
+     $this->middleware('auth');
 	}
     public function Addcontact()
     {
@@ -55,7 +56,7 @@ class ContactController extends Controller
 
        if($delete){
            //return redirect('all-contact')->with('status', 'Delete'.$id);
-        return redirect()->to('all-contact')->with('status', 'Item deleted successfully.'.$id);
+        return redirect('all-contact')->with('status', 'Item deleted successfully.'.$id);
        }
     }
 

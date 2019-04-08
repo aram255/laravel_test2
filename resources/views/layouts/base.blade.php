@@ -9,11 +9,28 @@
     </head>
     <body>
         @section('header')
+        @if (Route::has('login'))
         <header>
-            <a href="{{ URL::to('') }}">Home</a>
+           @auth
+           <a href="{{ URL::to('') }}">Home</a>
+           {{ Auth::user()->name }}
            <a href="{{ URL::to('add-contact') }}">Contact</a>
            <a href="{{ route('all.contact') }}">All Contact</a>
+
+           <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+           @else
+           <a href="{{URL::to('home')}}">Login</a>
+           
+           @endauth
          </header>
+          @endif
         @show
 
         <div class="footer">
