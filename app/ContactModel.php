@@ -9,6 +9,9 @@ class ContactModel extends Model
     public function InsertContactModel($data)
     {
        $insert = DB::table('contact')->insert($data);
+       /*  Insert Id */
+       //$id = DB::getPdo()->lastInsertId();;
+       /*  Insert Id */
        if($insert)
        {
        	// $notification = array(

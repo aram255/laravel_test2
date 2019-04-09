@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ContactModel;
 use DB;
+use Session;
 
 class ContactController extends Controller
 {
@@ -14,10 +15,24 @@ class ContactController extends Controller
 	{
 	   $this->model = new ContactModel();
      $this->middleware('auth');
+
+        /*  Sessia */
+      session(['key1' => 'value1','key2' => 'value2']);
+    
+     if(session()->has('key1') || session()->has('key2') || session()->has('key')){
+         $a =  session()->get('key1');
+       var_dump($a);
+      }else{
+         $a =  'No data in the session';
+         var_dump($a);
+      }
+       /*  Sessia */
+
 	}
     public function Addcontact()
     {
        return view('addcontact');
+
     }
 
     public function Allcontact()

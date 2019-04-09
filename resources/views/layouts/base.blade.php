@@ -35,6 +35,7 @@
 
         <div class="footer">
             @yield('footer')
+            
         </div>
     </body>
 </html>

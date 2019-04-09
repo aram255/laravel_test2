@@ -39,3 +39,7 @@ Route::post('edit-contact/{id}','ContactController@EditContact');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/dummy-data','StudentController@index')->name('dummy.join');
+Route::get('/all-data','StudentController@Alldata');

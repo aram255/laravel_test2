@@ -62,4 +62,5 @@
 
 @section('footer')
     <p>This is my body footer.</p>
+   
 @endsection

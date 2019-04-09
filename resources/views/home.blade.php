@@ -20,4 +20,15 @@
         </div>
     </div>
 </div>
+<?php 
+//  jnjel sessian
+//session()->pull('key1');
+//Session::forget('key1');
+//Session::flush();
+//$data = Session::regenerate('key1');
+$data = session()->get('key1'); //Session::All();
+
+
+   DD($data);
+   ?>
 @endsection
