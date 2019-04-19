@@ -29,6 +29,6 @@
 $data = session()->get('key1'); //Session::All();
 
 
-   DD($data);
+   // DD($data);
    ?>
 @endsection

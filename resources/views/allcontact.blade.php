@@ -40,10 +40,11 @@
       </tr>
     </thead>
     <tbody>
+      {{config('app.locale')}}
     	@foreach($all_contacts as $contact)
       <tr>
         <td>{{ $contact->id }}</td>
-        <td contenteditable="true">{{ $contact->name }}</td>
+        <td contenteditable="true">{{ $contact->name_am }}</td>
         <td contenteditable="true">{{ $contact->email }}</td>
         <td contenteditable="true">{{ $contact->phone }}</td>
         <th>

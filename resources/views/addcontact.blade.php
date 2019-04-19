@@ -34,8 +34,14 @@
 <div class="container">
   <form action="{{url('insert-contact')}}" method="post">
   	{{csrf_field()}}
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="name" placeholder="Your name..">
+    <label for="name_am">Anun</label>
+    <input type="text" id="name_am" name="name_am" placeholder="Your name..">
+
+    <label for="name_en">First Name</label>
+    <input type="text" id="name_en" name="name_en" placeholder="Your name..">
+
+    <label for="name_ru">Imya</label>
+    <input type="text" id="name_ru" name="name_ru" placeholder="Your name..">
 
     <label for="email">Email</label>
     <input type="text" id="email" name="email" placeholder="Your last email..">

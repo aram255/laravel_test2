@@ -48,13 +48,17 @@ class ContactController extends Controller
     {
                                         // ESi  Arajin tarberakna
        $this->validate($request, [
-           'name' =>  'required',
+           'name_am' =>  'required',
+           'name_en' =>  'required',
+           'name_ru' =>  'required',
            'email' => 'required',
            'phone' => 'required'
        ]);
 
        $data = array();
-       $data['name']  = $request->name;
+       $data['name_am']  = $request->name_am;
+       $data['name_en']  = $request->name_en;
+       $data['name_ru']  = $request->name_ru;
        $data['email'] = $request->email;
        $data['phone'] = $request->phone;
 

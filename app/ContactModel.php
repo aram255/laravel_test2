@@ -55,4 +55,5 @@ class ContactModel extends Model
         return redirect()->to('all-contact')->with('status', 'Item Edit successfully.');
        }
     }
+    
 }
