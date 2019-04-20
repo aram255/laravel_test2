@@ -27,8 +27,8 @@
   <!--   redirect maassige -->
 
 <div class="container">
-  <h2>Hoverable Dark Table</h2>
-  <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
+
+  <p>@lang('msg.Contact')</p>            
   <table class="table table-dark table-hover">
     <thead>
       <tr>

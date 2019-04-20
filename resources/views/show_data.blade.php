@@ -30,7 +30,7 @@
 
 
 <div class="container">
-  <h2>Hoverable Dark Table</h2>
+  <h2>@lang('msg.Contact')</h2>
               
   <table class="table table-dark table-hover">
     <thead>
@@ -44,7 +44,7 @@
     <tbody>
       <tr>
         <td>{{ $contacy_view->id }}</td>
-        <td>{{ $contacy_view->name }}</td>
+        <td>{{ $contacy_view->name_am }}</td>
         <td>{{ $contacy_view->email }}</td>
         <td>{{ $contacy_view->phone }}</td>
         

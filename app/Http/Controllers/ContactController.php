@@ -15,7 +15,8 @@ class ContactController extends Controller
 	{
 	   $this->model = new ContactModel();
      $this->middleware('auth');
-
+     
+     //$this->middleware('LanguageSwitcher');
         /*  Sessia */
       session(['key1' => 'value1','key2' => 'value2']);
     
@@ -51,16 +52,16 @@ class ContactController extends Controller
            'name_am' =>  'required',
            'name_en' =>  'required',
            'name_ru' =>  'required',
-           'email' => 'required',
-           'phone' => 'required'
+           'email'   => 'required',
+           'phone'   => 'required'
        ]);
 
        $data = array();
        $data['name_am']  = $request->name_am;
        $data['name_en']  = $request->name_en;
        $data['name_ru']  = $request->name_ru;
-       $data['email'] = $request->email;
-       $data['phone'] = $request->phone;
+       $data['email']    = $request->email;
+       $data['phone']    = $request->phone;
 
          //ContactModel::InsertContactModel($data); esi 1 tarberak  static dzevov
                      // 2-rd tarberak
@@ -96,15 +97,20 @@ class ContactController extends Controller
     public function EditContact(Request $request,$id)
     {
      $this->validate($request, [
-           'name' =>  'required',
-           'email' => 'required',
-           'phone' => 'required'
+           'name_am' =>  'required',
+           'name_en' =>  'required',
+           'name_ru' =>  'required',
+           'email'   =>  'required',
+           'phone'   =>  'required'
        ]);
 
        $data = array();
-       $data['name']  = $request->name;
-       $data['email'] = $request->email;
-       $data['phone'] = $request->phone;
+       $data['name_am']  = $request->name_am;
+       $data['name_en']  = $request->name_en;
+       $data['name_ru']  = $request->name_ru;
+       $data['name']     = $request->name;
+       $data['email']    = $request->email;
+       $data['phone']    = $request->phone;
 
        return $this->model->EditContactModel($id,$data);
     }

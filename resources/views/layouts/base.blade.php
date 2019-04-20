@@ -12,6 +12,10 @@
         @if (Route::has('login'))
         <header>
            @auth
+           <a href="locale/am">am</a>
+           <a href="locale/en">en</a>
+           <a href="locale/ru">ru</a>
+
            <a href="{{ URL::to('') }}">Home</a>
            {{ Auth::user()->name }}
            <a href="{{ URL::to('add-contact') }}">Contact</a>

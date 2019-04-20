@@ -29,13 +29,19 @@
         @endif  
 <!-- validate masseage -->
 
-   <h3>Contact Form</h3>
-
+   <h3>@lang('msg.Contact')</h3>
+{{app()->getLocale()}}
 <div class="container">
   <form action="{{url('edit-contact/'.$contact_view->id)}}" method="post">
   	{{csrf_field()}}
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="name" value="{{ $contact_view->name }}" placeholder="Your name..">
+    <label for="name_am">Anun</label>
+    <input type="text" id="name_am" name="name_am" value="{{ $contact_view->name_am }}" placeholder="Your name..">
+
+    <label for="name_ru">Nane</label>
+    <input type="text" id="name_ru" name="name_ru" value="{{ $contact_view->name_ru }}" placeholder="Your name..">
+
+     <label for="name_en">Imya</label>
+    <input type="text" id="name_en" name="name" value="{{ $contact_view->name_en }}" placeholder="Your name..">
 
     <label for="email">Email</label>
     <input type="text" id="email" name="email" value="{{ $contact_view->email }}" placeholder="Your last email..">

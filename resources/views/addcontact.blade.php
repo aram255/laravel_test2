@@ -29,7 +29,7 @@
         @endif  
 <!-- validate masseage -->
 
-   <h3>Contact Form</h3>
+    <p>@lang('msg.Contact')</p>
 
 <div class="container">
   <form action="{{url('insert-contact')}}" method="post">
